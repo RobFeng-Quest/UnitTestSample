@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using NUnit.Framework;
 using ServerProject.Converts;
+using StoryQ;
 
 namespace ServerProjectTests.Converts
 {
@@ -33,14 +34,16 @@ namespace ServerProjectTests.Converts
 		[Test]
 		public void TestCaseConvertToLower()
 		{
-			// Given a upper string "ABC"
-			AUpperString();
+			new Story("lower case letter convert")
+				.InOrderTo("convert a string to lower case")
+				.AsA("caller")
+				.IWant("to convert a string to lower")
 
-			// When calling the convert  
-			CallingTheConvert();
-
-			// Then it should be return a lower string
-			ItShouldBeReturnALowerString();
+						.WithScenario("upper string to lower")
+							.Given(AUpperString)
+							.When(CallingTheConvert)
+							.Then(ItShouldBeReturnALowerString)
+				.Execute();
 		}
 
 		private void AUpperString()
