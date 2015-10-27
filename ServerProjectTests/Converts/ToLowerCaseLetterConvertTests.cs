@@ -28,7 +28,6 @@ namespace ServerProjectTests.Converts
 		}
 
 		private string convertContent = null;
-		private string expected = null;
 		private string actual = null;
 
 		[Test]
@@ -40,16 +39,15 @@ namespace ServerProjectTests.Converts
 				.IWant("to convert a string to lower")
 
 						.WithScenario("upper string to lower")
-							.Given(AUpperString)
+							.Given(AUpperString_, "ABC")
 							.When(CallingTheConvert)
-							.Then(ItShouldBeReturnALowerString)
+							.Then(ItShouldBeReturnALowerString_, "abc")
 				.Execute();
 		}
 
-		private void AUpperString()
+		private void AUpperString_(string content)
 		{
-			convertContent = "ABC";
-			expected = "abc";
+			convertContent = content;
 		}
 
 		private void CallingTheConvert()
@@ -58,7 +56,7 @@ namespace ServerProjectTests.Converts
 			actual = converterHost.Convert(convertContent);
 		}
 
-		private void ItShouldBeReturnALowerString()
+		private void ItShouldBeReturnALowerString_(string expected)
 		{
 			Assert.AreEqual(expected, actual);
 		}
