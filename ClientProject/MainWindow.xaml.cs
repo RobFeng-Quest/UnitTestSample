@@ -24,5 +24,17 @@ namespace ClientProject
 		{
 			InitializeComponent();
 		}
+
+		private ConverterHost converter = new ConverterHost();
+
+		private void btnUpper_Click(object sender, RoutedEventArgs e)
+		{
+			txtUpperContent.Text = converter.ToUpper(txtContent.Text);
+		}
+
+		private void btnLower_Click(object sender, RoutedEventArgs e)
+		{
+			txtLowerContent.Text = converter.ToLower(txtContent.Text);
+		}
 	}
 }
