@@ -26,19 +26,37 @@ namespace ServerProjectTests.Converts
 			Assert.AreEqual(expected, actual);
 		}
 
+		private string convertContent = null;
+		private string expected = null;
+		private string actual = null;
 
 		[Test]
 		public void TestCaseConvertToLower()
 		{
 			// Given a upper string "ABC"
-			string convertContent = "ABC";
-			string expected = "abc";
-			ToLowerCaseLetterConvert converterHost = new ToLowerCaseLetterConvert();
+			AUpperString();
 
-			// When calling the convert 
-			string actual = converterHost.Convert(convertContent);
+			// When calling the convert  
+			CallingTheConvert();
 
 			// Then it should be return a lower string
+			ItShouldBeReturnALowerString();
+		}
+
+		private void AUpperString()
+		{
+			convertContent = "ABC";
+			expected = "abc";
+		}
+
+		private void CallingTheConvert()
+		{
+			ToLowerCaseLetterConvert converterHost = new ToLowerCaseLetterConvert();
+			actual = converterHost.Convert(convertContent);
+		}
+
+		private void ItShouldBeReturnALowerString()
+		{
 			Assert.AreEqual(expected, actual);
 		}
 	}
