@@ -10,7 +10,7 @@ namespace ServerProject.Converts
 	{
 		public string Convert(string aContent)
 		{
-			return aContent.ToLower();
+			return aContent.ToUpper();
 		}
 	}
 }
