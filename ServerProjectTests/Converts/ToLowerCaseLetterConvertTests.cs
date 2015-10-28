@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using NUnit.Framework;
@@ -8,7 +9,7 @@ using ServerProject.Converts;
 using StoryQ;
 
 namespace ServerProjectTests.Converts
-{
+{			 
 	[TestFixture]
 	public class ToLowerCaseLetterConvertTests
 	{
@@ -42,7 +43,8 @@ namespace ServerProjectTests.Converts
 							.Given(AUpperString_, "ABC")
 							.When(CallingTheConvert)
 							.Then(ItShouldBeReturnALowerString_, "abc")
-				.Execute();
+
+				.ExecuteWithReport(MethodBase.GetCurrentMethod());
 		}
 
 		private void AUpperString_(string content)
