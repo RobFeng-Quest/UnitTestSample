@@ -1,0 +1,50 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02 Fixing the Client API - Dependency Injection", "02 Fixing the Client API - Dependency Injection", "{FF83EE73-9D18-41AF-AC55-DAE91B7B01CE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01 Simple Unit Test", "01 Simple Unit Test", "{80BEF419-2DBD-485E-A1B8-46BFF8CFA072}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartHomeSystem", "01 Simple Unit Test\SmartHomeSystem\SmartHomeSystem.csproj", "{76D5E389-FCBD-4D61-BFB3-F013617A7D32}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartHomeSystem.UnitTest", "01 Simple Unit Test\SmartHomeSystem.UnitTest\SmartHomeSystem.UnitTest.csproj", "{A4ECF3D1-38BB-405F-A722-269A9C675186}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartHomeSystem", "02 Fixing the Client API - Dependency Injection\SmartHomeSystem\SmartHomeSystem.csproj", "{E620D132-140C-4D24-89AE-E4743C7D64FC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartHomeSystem.UnitTest", "02 Fixing the Client API - Dependency Injection\SmartHomeSystem.UnitTest\SmartHomeSystem.UnitTest.csproj", "{CC84F33F-1A02-4020-8622-555AEBF707DE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{76D5E389-FCBD-4D61-BFB3-F013617A7D32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76D5E389-FCBD-4D61-BFB3-F013617A7D32}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76D5E389-FCBD-4D61-BFB3-F013617A7D32}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76D5E389-FCBD-4D61-BFB3-F013617A7D32}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4ECF3D1-38BB-405F-A722-269A9C675186}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4ECF3D1-38BB-405F-A722-269A9C675186}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4ECF3D1-38BB-405F-A722-269A9C675186}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4ECF3D1-38BB-405F-A722-269A9C675186}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E620D132-140C-4D24-89AE-E4743C7D64FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E620D132-140C-4D24-89AE-E4743C7D64FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E620D132-140C-4D24-89AE-E4743C7D64FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E620D132-140C-4D24-89AE-E4743C7D64FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC84F33F-1A02-4020-8622-555AEBF707DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC84F33F-1A02-4020-8622-555AEBF707DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC84F33F-1A02-4020-8622-555AEBF707DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC84F33F-1A02-4020-8622-555AEBF707DE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{76D5E389-FCBD-4D61-BFB3-F013617A7D32} = {80BEF419-2DBD-485E-A1B8-46BFF8CFA072}
+		{A4ECF3D1-38BB-405F-A722-269A9C675186} = {80BEF419-2DBD-485E-A1B8-46BFF8CFA072}
+		{E620D132-140C-4D24-89AE-E4743C7D64FC} = {FF83EE73-9D18-41AF-AC55-DAE91B7B01CE}
+		{CC84F33F-1A02-4020-8622-555AEBF707DE} = {FF83EE73-9D18-41AF-AC55-DAE91B7B01CE}
+	EndGlobalSection
+EndGlobal
