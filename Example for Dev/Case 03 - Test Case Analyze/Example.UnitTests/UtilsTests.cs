@@ -6,8 +6,10 @@ using NUnit.Framework;
 
 namespace Example.UnitTests
 {
+    [TestFixture]
     public class UtilsTests
     {
+        [Test]
         public void Test1()
         {
             List<ScoredDocument> documents = new List<ScoredDocument>();
@@ -40,9 +42,9 @@ namespace Example.UnitTests
             Utils.SortAndFilterDocuments(documents);
 
             Assert.AreEqual(3, documents.Count);
-            Assert.AreEqual(99, documents[0]);
-            Assert.AreEqual(82, documents[1]);
-            Assert.AreEqual(60, documents[2]);
+            Assert.AreEqual(99, documents[0].Score);
+            Assert.AreEqual(82, documents[1].Score);
+            Assert.AreEqual(60, documents[2].Score);
         }
     }
 }
