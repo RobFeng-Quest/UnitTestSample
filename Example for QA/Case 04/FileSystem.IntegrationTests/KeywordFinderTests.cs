@@ -18,7 +18,7 @@ namespace FileSystem.IntegrationTests
             string filePath = @"C:\temp\FileForFindMatchedKeywordIntegrationTests.txt";
             File.WriteAllText(filePath, textInFile);
 
-            KeywordFinder keywordFinder = new KeywordFinder();
+            KeywordFinder keywordFinder = new KeywordFinder(new DataFileReader());
             int actualResult = keywordFinder.FindMatchedKeyword(filePath, "Hello");
 
             int expectedResult = 3;

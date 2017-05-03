@@ -27,7 +27,7 @@ namespace FileSystem
 
         private void btnFind_Click(object sender, EventArgs e)
         {
-            KeywordFinder finder = new KeywordFinder();
+            KeywordFinder finder = new KeywordFinder(new DataFileReader());
             int matchedNumber = finder.FindMatchedKeyword(txtPath.Text, txtTextToFind.Text);
 
             lblResult.Text = matchedNumber + " keyword find in the file.";

@@ -21,15 +21,19 @@
             <ColumnDefinition Width="Auto" />
         </Grid.ColumnDefinitions>
 
-        <Label Grid.Column="0" Grid.Row="0" Content="File Path:" />
+        <Label Grid.Column="0"
+               Grid.Row="0"
+               Content="File Path:" />
         <TextBox Grid.Column="1"
                  Grid.Row="0"
-                 x:Name="txtPath" />
+                 x:Name="txtPath"
+                 Text="{Binding Path=SelectedFilePath}" />
         <Button Grid.Column="2"
                 Grid.Row="0"
                 Margin="3, 0, 20, 0"
-                x:Name="btnBrowser" Content="..."
-                Click="btnBrowser_Click" />
+                x:Name="btnBrowser"
+                Content="..."
+                Command="{Binding Path=BrowserFileCommand}" />
 
 
         <Label Grid.Column="0"
@@ -37,18 +41,20 @@
                Content="Test to find:" />
         <TextBox Grid.Column="1"
                  Grid.Row="1"
-                 x:Name="txtTextToFind" Text="Hello" />
+                 x:Name="txtTextToFind"
+                 Text="{Binding Path=KeywordToSearch}"  />
 
 
         <Button Grid.Column="1"
                 Grid.Row="2"
                 x:Name="btnFind"
                 Content="Find"
-                Click="btnFind_Click" />
+                Command="{Binding Path=SearchKeywordCommand}" />
 
 
         <Label Grid.Column="1"
                Grid.Row="3"
-               x:Name="lblResult" Content="" />
+               x:Name="lblResult"
+               Content="{Binding Path=SearchResult}" />
     </Grid>
 </Window>

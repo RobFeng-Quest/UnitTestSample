@@ -9,9 +9,16 @@ namespace FileSystem
 {
     public class KeywordFinder
     {
+        private IFileReader FFileReader = null;
+
+        public KeywordFinder(IFileReader aFileReader)
+        {
+            FFileReader = aFileReader;
+        }
+
         public int FindMatchedKeyword(string aFilePath, string aKeyword)
         {
-            string textInFile = File.ReadAllText(aFilePath);
+            string textInFile = FFileReader.ReadAllText(aFilePath);
             TextKeywordFinder textKeywordFinder = new TextKeywordFinder();
 
             return textKeywordFinder.FindMatchedKeyword(textInFile, aKeyword);

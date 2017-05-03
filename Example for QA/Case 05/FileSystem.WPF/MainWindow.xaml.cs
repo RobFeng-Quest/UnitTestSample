@@ -24,22 +24,8 @@ namespace FileSystem.WPF
         public MainWindow()
         {
             InitializeComponent();
-        }
 
-        private void btnBrowser_Click(object sender, RoutedEventArgs e)
-        {
-            OpenFileDialog folderBrowserDialog = new OpenFileDialog();
-            folderBrowserDialog.ShowDialog();
-
-            txtPath.Text = folderBrowserDialog.FileName;
-        }
-
-        private void btnFind_Click(object sender, RoutedEventArgs e)
-        {
-            KeywordFinder finder = new KeywordFinder();
-            int matchedNumber = finder.FindMatchedKeyword(txtPath.Text, txtTextToFind.Text);
-
-            lblResult.Content = matchedNumber + " keyword find in the file.";
+            this.DataContext = new MianViewModel();
         }
     }
 }
