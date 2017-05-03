@@ -8,7 +8,7 @@ namespace Example.UnitTests
 {
     public class UtilsTests
     {
-        public void SortAndFilterDocuments_Test1()
+        public void Test1()
         {
             List<ScoredDocument> documents = new List<ScoredDocument>();
 
