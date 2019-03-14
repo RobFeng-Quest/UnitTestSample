@@ -1,6 +1,7 @@
 ﻿using NUnit.Framework;
 using System;
 using Moq;
+using Autofac.Extras.Moq;
 
 namespace SmartHomeSystem.UnitTest
 {
@@ -35,6 +36,22 @@ namespace SmartHomeSystem.UnitTest
             // Arrange
             var fakeDateTimeProvider = Mock.Of<IDateTimeProvider>();
             var controller = new SmartHomeController(fakeDateTimeProvider);
+            
+            // Act
+            controller.ActuateLights(false);
+
+            // Assert
+            Assert.AreEqual(new DateTime(0), controller.LastMotionTime);
+        }
+
+        [Test]
+        public void ActuateLights_MotionNotDetected_NoChangeTimeOfMotion2()
+        {
+            // Arrange
+            var mock = AutoMock.GetLoose(); // Using Autofac + Moq
+            mock.Mock<IDateTimeProvider>().Setup(p => p.GetDateTime()).Throws<InvalidOperationException>();
+
+            var controller = mock.Create<SmartHomeController>();
             
             // Act
             controller.ActuateLights(false);
